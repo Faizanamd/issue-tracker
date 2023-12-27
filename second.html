@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/projectPage.style.css">
+    <link rel="stylesheet" href="public/styles/section.style.css">
+    <link rel="stylesheet" href="public/styles/layout.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">iSsueTracker</div>
+        <div class="rightNav">
+            <button id="newProjectBtn">New Project</button>
+        </div>
+    </nav>
+
+    
+
+    <section>
+        <div class="topArea">
+            <div class="projectDiv">
+                <div class="issueProjectBoxHeading">
+                    <h2 class="projectHeaiding">Sample Project 1</h2>
+                    <h2 class="issueCounterHedading">iSsue Consist: <span>3</span></h2>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse suscipit cum deserunt corporis eveniet
+                    nesciunt molestias, amet, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, optio
+                    magnam quam voluptatibus soluta laudantium assumenda commodi cumque temporibus ducimus? facere
+                    alias, consequuntur officia fugit odit aliquam beatae.</p>
+                <div class="bottomIssueBox">
+                    <p>Author: <strong>John Doe</strong><span id="authorName"></span></p>
+                    <time>Posted: <strong id="postTimeIssue">12:30 23 Dec 2023</strong></time>
+                </div>
+            </div>
+           
+           
+            
+
+            <div class="issueListArea">
+                <div class="topIssueButtonArea">
+                    <div class="topIssueButtonAreaTop">
+                        <h2 style="text-align: center;">Issues in the Project</h2>
+                        <button>Delete Project</button>
+                    </div>
+                    <div class="topIssueButtonAreaBottom">
+                        <button id="newIssueBtn">New Issue</button>
+                        <button>Filter</button>
+                        <button>search</button>
+                    </div>
+                </div>
+                <div class="issueLists">
+                    <div class="issueBox">
+                        <button id="issueDeleteButton"><img src="./public/images/delete.png" alt=""></button>
+                        <h2>Very Good Website</h2>
+                        <div class="errorInProjects">
+                            <Label>Syntax Errors</Label>
+                            <Label>Runtime Errors</Label>
+                            <Label>Resource Errors</Label>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ab rem, doloribus
+                            explicabo ut eum adipisci est, distinctio quidem mollitia at! Deserunt molestias minima
+                            nesciunt.</p>
+                        <div class="bottomIssueBox">
+                            <div class="bottomIssueBoxLeft">
+                                    <button>Resolve</button>
+                            </div>
+                            <div class="bottomIssueBoxRight">
+                                <p>Author: <strong>John Doe</strong><span id="authorName"></span></p>
+                            <time>Posted: <strong id="postTimeIssue">12:30 23 Dec 2023</strong></time>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+           
+        </div>
+        <div class="modal2" id="newProjectModal2">
+            <div class="modal-content2">
+                <span class="close2" id="closeModal2">&times;</span>
+                <h1 class="modelMainHeading">Create New Project</h1>
+                <!-- Form for creating a new project -->
+                <form id="newProjectForm2">
+                    <label for="bugTitle">iSsue</label>
+                    <input type="text" name="bugTitle" id="bugTitle" placeholder="Bug Title" required>
+                   <div class="bugTypesInputs">
+                    <label for="bugOption">Choose Bugs</label>
+                    <select multiple size="4" name="bugOption" id="bugOption">
+                        <option value="FunctionalBugs">Functional Bugs</option>
+                        <option value="UIBugs">UI Bugs</option>
+                        <option value="BrowserCompatibilityBugs">Browser Compatibility Bugs</option>
+                        <option value="MobileResponsivenessBugs">Mobile Responsiveness Bugs</option>
+                        <option value="PerformanceIssues">Performance Issues</option>
+                        <option value="AccessibilityBugs">Accessibility Bugs</option>
+                        <option value="DataInputOutputErrors">Data Input/Output Errors</option>
+                        <option value="LoginAuthenticationIssues">Login/Authentication Issues</option>
+                        <option value="ErrorHandlingBugs">Error Handling Bugs</option>
+                        <option value="DocumentationDiscrepancies">Documentation Discrepancies</option>
+                    </select>
+                    
+                   </div>
+                    <label for="bugDescription">Enter Description</label>
+                    <textarea name="bugDescription" id="bugDescription" cols="30" rows="5" placeholder="Enter Description Here"
+                        required></textarea>
+    
+                    <label for="bugAuthor">Name</label>
+                    <input type="text" name="bugAuthor" id="bugAuthor" placeholder="Enter your Name" required>
+    
+                    <button type="submit" class="newIssueButton">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <script src="./public/scripts/newIssue.modal.js"></script>
+    <!-- <script src="./public/scripts/Layout.modal.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+
+
+Syntax Errors
+Runtime Errors
+Resource Errors
+Security Errors
+Validation Errors
+404 Not Found
+Connection Errors

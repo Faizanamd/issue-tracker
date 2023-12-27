@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSsueTracker</title>
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/section.style.css">
+    <link rel="stylesheet" href="/styles/projectPage.style.css">
+</head>
+
+<body>
+    <!-- <script src="scripts/Layout.modal.js"></script> -->
+    <!-- Header starts here -->
+    <nav>
+        <div class="logo"><a href="/">FZN iSsue Tracker</a></div>
+        <div class="rightNav">
+            <button  id="newProjectBtn">New Project</button>
+        </div>
+    </nav>
+    <div class="modal" id="newProjectModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h1 class="modelMainHeading">Create New Project</h1>
+            <!-- Form for creating a new project -->
+            <form id="newProjectForm" action="/newProject" method="post">
+                <label for="name">Project Name</label>
+                <input type="text" name="name" id="name" placeholder="Project Name" maxlength="16" required>
+
+                <label for="description">Enter Description</label>
+                <textarea name="description" id="description" cols="30" rows="5" placeholder="Enter Description Here"
+                    required></textarea>
+
+                <label for="author">Author Name</label>
+                <input type="text" name="author" id="author" placeholder="Enter Author Name" required>
+
+                <button type="submit" class="newProjectButton">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Headers ends here -->
+
+    <%- body %>
+
+
+
+    
+    <!-- <script src="/scripts/newIssue.modal.js"></script> -->
+</body>
+
+</html>
