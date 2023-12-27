@@ -48,7 +48,7 @@
                     </div>
                     <div class="topIssueButtonAreaBottom">
                         <button id="newIssueBtn">New Issue</button>
-                        <button>Filter</button>
+                        <button id="filterBtn">Filter</button>
                         <button>search</button>
                     </div>
                 </div>
@@ -118,14 +118,31 @@
                 </form>
             </div>
         </div>
+        <div class="modal3" id="filterModal3">
+            <div class="modal-content3">
+                <span class="close3" id="closeFilterModal3">&times;</span>
+                <h1 class="modalMainHeading3">Filter Options</h1>
+                <!-- Filter options go here -->
+                <form id="filterForm">
+                    <label for="filterOption">Select Filter Options</label>
+                    <select multiple size="4" name="filterOption" id="filterOption">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <button type="button" id="applyFilter">Apply Filter</button>
+                </form>
+            </div>
+        </div>
 
     </section>
 
 
 
 
-    <script src="./public/scripts/newIssue.modal.js"></script>
-    <!-- <script src="./public/scripts/Layout.modal.js"></script> -->
+    <!-- <script src="./public/scripts/newIssue.modal.js"></script> -->
+    <script src="./public/scripts/Layout.modal.js"></script>
 </body>
 
 </html>

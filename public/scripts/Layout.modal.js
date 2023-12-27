@@ -61,3 +61,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // JavaScript for filter modal
+    const filterBtn = document.getElementById('filterBtn');
+    const filterModal = document.getElementById('filterModal3');
+    const closeFilterModal = document.getElementById('closeFilterModal3');
+
+    filterBtn.addEventListener('click', () => {
+        filterModal.style.display = 'block';
+    });
+
+    closeFilterModal.addEventListener('click', () => {
+        filterModal.style.display = 'none';
+    });
+
+    // Optional: Close the modal if the user clicks outside the modal
+    window.addEventListener('click', (event) => {
+        if (event.target === filterModal) {
+            filterModal.style.display = 'none';
+        }
+    });
+
+    // Optional: Apply filter logic when the "Apply Filter" button is clicked
+    const applyFilterBtn = document.getElementById('applyFilter');
+    applyFilterBtn.addEventListener('click', () => {
+        // Add logic to apply the selected filters
+        filterModal.style.display = 'none'; // Close the modal after applying filters
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var selectAllOptionsCheckbox = document.getElementById('selectAllOptions');
+    var bugOptionsSelect = document.getElementById('bugOption');
+
+    selectAllOptionsCheckbox.addEventListener('change', function () {
+        var options = bugOptionsSelect.options;
+
+        for (var i = 0; i < options.length; i++) {
+            options[i].selected = selectAllOptionsCheckbox.checked;
+        }
+    });
+});

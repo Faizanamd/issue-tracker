@@ -44,9 +44,33 @@ export default class IssueRepository{
             throw new Error(err);
         }
     }
-    async  filterBasedOnErrorTypesRepo(errorTypes) {
+    async filterBasedOnErrorTypesRepo(errorTypes) {
         try {
-            const filteredIssues = await Issue.find({ bugOption: { $in: errorTypes } }).exec();
+            const filteredIssues = await IssueModel.find({
+                bugOption: { $in: errorTypes },
+            }).exec();
+    
+            console.log("Filtered Options", filteredIssues);
+            return filteredIssues;
+        } catch (err) {
+            console.error(err);
+            throw new Error(err);
+        }
+    }
+
+    async searchBasedIssueRepo(query) {
+        try {
+            // Create a regular expression for the search query
+            const regex = new RegExp(query, 'i');
+    
+            // Perform a search on both 'bugTitle' and 'bugDescription'
+            const filteredIssues = await IssueModel.find({
+                $or: [
+                    { bugTitle: { $regex: regex } },
+                    { bugDescription: { $regex: regex } }
+                ]
+            }).exec();
+    
             return filteredIssues;
         } catch (err) {
             console.error(err);

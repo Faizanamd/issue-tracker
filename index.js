@@ -20,8 +20,10 @@ app.get('/projects/delete/:id', projectController.deleteProjectController)
 app.get('/projects/:projectId/delete/:id', projectController.deleteIssueController);
 
 
-app.get('/projects/:id', projectController.showProjectController)
-app.get('/projects/:id/?', issueController.filterBasedOnErrorTypes)
+app.post('/projects/:id/filter', issueController.filterBasedOnErrorTypes);
+app.post('/projects/:id/search', issueController.searchIssueController);
+app.get('/projects/:id', projectController.showProjectController);
+
 app.post('/newProject', projectController.addNewProjectContrller)
 app.post('/newIssue', issueController.addNewIssueController);
 
