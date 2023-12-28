@@ -2,31 +2,44 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
     <title>iSsueTracker</title>
+    
+    <!-- Linking stylesheets for styling -->
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/home.style.css">
     <link rel="stylesheet" href="/styles/projectPage.style.css">
 </head>
 
 <body>
-    <!-- <script src="scripts/Layout.modal.js"></script> -->
-    <!-- Header starts here -->
+    <!-- Header section -->
     <nav>
+        <!-- Logo and home link -->
         <div class="logo"><a href="/">FZN iSsue Tracker</a></div>
+        
+        <!-- Navigation buttons or options -->
         <div class="rightNav">
-            <button  id="newProjectBtn">New Project</button>
+            <button id="newProjectBtn">New Project</button>
         </div>
     </nav>
+    
+    <!-- Modal for creating a new project -->
     <div class="modal" id="newProjectModal">
         <div class="modal-content">
+            <!-- Close button for the modal -->
             <span class="close" id="closeModal">&times;</span>
+            
+            <!-- Heading for the modal -->
             <h1 class="modelMainHeading">Create New Project</h1>
+            
             <!-- Form for creating a new project -->
             <form id="newProjectForm" action="/newProject" method="post">
                 <label for="name">Project Name</label>
-                <input type="text" name="name" id="name" placeholder="Project Name"  required>
+                <input type="text" name="name" id="name" placeholder="Project Name" required>
 
                 <label for="description">Enter Description</label>
                 <textarea name="description" id="description" cols="30" rows="5" placeholder="Enter Description Here"
@@ -35,37 +48,41 @@
                 <label for="author">Author Name</label>
                 <input type="text" name="author" id="author" placeholder="Enter Author Name" required>
 
+                <!-- Submit button for the form -->
                 <button type="submit" class="newProjectButton">Submit</button>
             </form>
         </div>
     </div>
 
-    <!-- Headers ends here -->
-
+    <!-- Content of the page, dynamically filled by other views -->
     <%- body %>
 
+    <!-- Footer section -->
     <footer>
         <div class="footer-container">
-            
+            <!-- Footer links -->
             <div class="footer-links">
                 <ul>
                     <li><a href="http://www.linkedin.com/in/fxan-thues" target="_blank">linkedIn</a></li>
                     <li><a href="http://github.com/Faizanamd" target="_blank">Github</a></li>
                 </ul>
             </div>
+            
+            <!-- Footer contact information -->
             <div class="footer-contact">
                 <h4>Contact Us</h4>
                 <p>Email: famdizan8391@.com</p>
                 <p>Phone: +91 6389664891</p>
             </div>
         </div>
+        
+        <!-- Bottom section of the footer with copyright information -->
         <div class="footer-bottom">
             <p>&copy; 2023 Faizanamd All right reserved</p>
         </div>
     </footer>
-    
 
-    
+    <!-- Script tag for potential JavaScript functionality -->
     <!-- <script src="/scripts/newIssue.modal.js"></script> -->
 </body>
 
