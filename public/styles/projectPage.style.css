@@ -49,8 +49,11 @@
 
 .issueProjectBoxHeading {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    column-gap: 6px;
+
 
 }
 
@@ -110,9 +113,11 @@
 
 .topIssueButtonAreaTop {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-left: 16px;
+    column-gap: 12px;
 }
 
 .topIssueButtonArea h2 {
@@ -123,9 +128,11 @@
 
 .topIssueButtonAreaBottom {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
+    row-gap: 6px;
 }
 
 #deletProjectButton {
@@ -274,6 +281,7 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 8px;
+
 }
 
 .issueBox h2 {
@@ -331,6 +339,7 @@
 
 .bottomIssueBox {
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-between;
 }
@@ -605,6 +614,11 @@ select {
     #searchForm button{
         font-size: 13px;
     }
+    .bottomIssueBoxRight{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 /* Responsive styles */
@@ -623,7 +637,8 @@ select {
         align-items: center;
     }
     .issueListArea{
-        width: 90%;
+        width: 99%;
+        padding: 0px 6px;
         /* background-color: red; */
     }
     .issueBox{
@@ -632,6 +647,32 @@ select {
     }
     .issueBox{
         /* width: 90%; */
-        background-color: red;
+        /* background-color: red; */
+        padding: 8px 6px;
+    }
+    .topIssueButtonAreaBottom{
+        margin-left: 16px;
+        column-gap: 6px;
+        row-gap: 3px;
+    }
+    #searchForm{
+        width: 100%;
+    }
+    .bottomIssueBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 16px;
+    }
+    .bottomIssueBoxRight{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .errorInProjects label{
+        font-size: 1rem;
+    }
+    .topIssueButtonAreaTop{
+        column-gap: 2px;
     }
 }
