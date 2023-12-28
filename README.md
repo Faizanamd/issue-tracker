@@ -22,33 +22,3 @@ To run the application locally or contribute to the development, follow these st
 # Clone the repository
 git clone https://github.com/Faizanamd/issue-tracker.git
 
-# Navigate to the project directory
-cd issue-tracker
-
-# Install dependencies
-npm install
-
-# Start the application
-npm start
-
-
-Welcome to the Issue Tracker application!
-
-## Viewing the Application
-
-To view the application, open your browser and visit [http://localhost:3000](http://localhost:3000).
-
-## Demo Video
-
-Watch a quick demo of the Issue Tracker in action [here](#) (replace "#" with the actual link).
-
-## Contributing
-
-If you'd like to contribute to the development of Issue Tracker, please check our [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Happy issue tracking!
-```bash
