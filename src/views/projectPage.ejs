@@ -28,11 +28,13 @@
                     <div class="topIssueButtonArea">
                         <div class="topIssueButtonAreaTop">
                             <h2>iSsues in the Project</h2>
+                            <button id="newIssueBtn">New Issue</button>
                             <a href="/projects/delete/<%= projectId %>" id="deletProjectButton">Delete Project</a>
                         </div>
                         <div class="topIssueButtonAreaBottom">
-                            <button id="newIssueBtn">New Issue</button>
+
                             <!-- app.get('/projects/:id?', issueController.filterBasedOnErrorTypes) -->
+                            <a href="/projects/<%= projectId %>" id="clearAllFilter">Clear all filter</a>
                             <button id="filterBtn">Filter</button>
                             <!-- <button>search</button> -->
                             <form id="searchForm" action="/projects/<%= projectId %>/search" method="post">
@@ -44,6 +46,7 @@
                         </div>
                     </div>
                     <div class="issueLists">
+
                         <% if(issues){ %>
                             <% issues.map((issue)=>{ %>
                                 <div class="issueBox">
